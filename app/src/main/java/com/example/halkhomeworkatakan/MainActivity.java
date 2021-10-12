@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn, btnResultActivity;
+    Button btn, btnResultActivity,btnFragmentCreate;
     public EditText editText1;
     public String transferData, tag;
 
@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         btn = findViewById(R.id.button2);
         editText1 = findViewById(R.id.editTextData);
-
         btnResultActivity = findViewById(R.id.buttonResult);
+        btnFragmentCreate = findViewById(R.id.buttonFragment);
 
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
                 someActivityResultLauncher.launch(resultIntent);
             }
         });
+
+        btnFragmentCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent fragmentIntent = new Intent(MainActivity.this,FragmentExamplesActivity.class);
+                startActivity(fragmentIntent);
+            }
+        });
+
+
     }
 
     ActivityResultLauncher<Intent> someActivityResultLauncher = registerForActivityResult(
