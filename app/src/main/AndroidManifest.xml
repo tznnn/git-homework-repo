@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HalkHomeworkAtakan">
         <activity
+            android:name=".FragmentViewPagerActivity"
+            android:exported="true" />
+        <activity
             android:name=".FragmentDataTransferActivity"
             android:exported="true" />
         <activity

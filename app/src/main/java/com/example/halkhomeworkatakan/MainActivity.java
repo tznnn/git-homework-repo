@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn, btnResultActivity,btnFragmentCreate,btnFragmentDataTransfer;
+    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager;
     public EditText editText1;
     public String transferData, tag;
 
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btnResultActivity = findViewById(R.id.buttonResult);
         btnFragmentCreate = findViewById(R.id.buttonFragment);
         btnFragmentDataTransfer = findViewById(R.id.buttonFragmentDataTransfer);
+        btnViewPager = findViewById(R.id.buttonFragmentViewPager);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         btnFragmentCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent fragmentIntent = new Intent(MainActivity.this,FragmentExamplesActivity.class);
+                Intent fragmentIntent = new Intent(MainActivity.this, FragmentExamplesActivity.class);
                 startActivity(fragmentIntent);
             }
         });
@@ -66,11 +67,18 @@ public class MainActivity extends AppCompatActivity {
         btnFragmentDataTransfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent fragmentDataIntent = new Intent(MainActivity.this,FragmentDataTransferActivity.class);
+                Intent fragmentDataIntent = new Intent(MainActivity.this, FragmentDataTransferActivity.class);
                 startActivity(fragmentDataIntent);
             }
         });
 
+        btnViewPager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent fragmentViewPager = new Intent(MainActivity.this,FragmentViewPagerActivity.class);
+                startActivity(fragmentViewPager);
+            }
+        });
     }
 
     ActivityResultLauncher<Intent> someActivityResultLauncher = registerForActivityResult(
