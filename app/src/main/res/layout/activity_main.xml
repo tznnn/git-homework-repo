@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rcv_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
 
     <EditText
         android:id="@+id/editTextData"
@@ -29,7 +30,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="32dp"
         android:text="ACTİVİTY ARASI GEÇİŞ"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +43,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="32dp"
         android:text="ACTİVİTY RESULT İLE DÖNME"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +56,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="164dp"
         android:layout_marginEnd="32dp"
         android:text="FRAGMENT OLUŞTURMA"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +69,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="228dp"
         android:layout_marginEnd="32dp"
         android:text="FRAGMENT VERİ TAŞIMA"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,9 +82,22 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="304dp"
         android:layout_marginEnd="32dp"
         android:text="FRAGMENT VİEW PAGER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+    <Button
+        android:id="@+id/buttonRecycleViewDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="372dp"
+        android:layout_marginEnd="32dp"
+        android:text="RECYCLEVİEW OLUŞTURMA VE DETAY GÖSTERME"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

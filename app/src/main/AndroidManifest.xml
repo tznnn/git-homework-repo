@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HalkHomeworkAtakan">
         <activity
+            android:name=".ItemDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RecycleViewActivity"
+            android:exported="true" />
+        <activity
             android:name=".FragmentViewPagerActivity"
             android:exported="true" />
         <activity
