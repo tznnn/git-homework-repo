@@ -5,6 +5,8 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,12 +17,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager;
+    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView;
     public EditText editText1;
     public String transferData, tag;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,27 @@ public class MainActivity extends AppCompatActivity {
         btnFragmentCreate = findViewById(R.id.buttonFragment);
         btnFragmentDataTransfer = findViewById(R.id.buttonFragmentDataTransfer);
         btnViewPager = findViewById(R.id.buttonFragmentViewPager);
+        btnRecycleView = findViewById(R.id.buttonRecycleViewDetail);
+
+        /*
+        rcv_main = findViewById(R.id.rcv_main);
+        rcv_main.setHasFixedSize(true);
+        rcv_main.setLayoutManager(new LinearLayoutManager(this));
+
+        List<ItemMain> itemMainList = new ArrayList<>();
+        itemMainList.add(new ItemMain(1,"asdadas"));
+        itemMainList.add(new ItemMain(1,"123123"));
+
+        itemMainList.add(new ItemMain(1,"2323"));
+
+        itemMainList.add(new ItemMain(1,"dfgdfgd"));
+
+
+
+
+
+        rcv_main.setAdapter(new AdapterMain(itemMainList));
+*/
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,10 +102,20 @@ public class MainActivity extends AppCompatActivity {
         btnViewPager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent fragmentViewPager = new Intent(MainActivity.this,FragmentViewPagerActivity.class);
+                Intent fragmentViewPager = new Intent(MainActivity.this, FragmentViewPagerActivity.class);
                 startActivity(fragmentViewPager);
             }
         });
+
+        btnRecycleView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent rcvPage = new Intent(MainActivity.this, RecycleViewActivity.class);
+                startActivity(rcvPage);
+            }
+        });
+
+
     }
 
     ActivityResultLauncher<Intent> someActivityResultLauncher = registerForActivityResult(
