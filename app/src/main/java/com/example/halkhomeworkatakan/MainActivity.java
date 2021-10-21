@@ -23,7 +23,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView, btnNavMenu;
+    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView, btnNavMenu, btnCalenderView;
     public EditText editText1;
     public String transferData, tag;
 
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btnViewPager = findViewById(R.id.buttonFragmentViewPager);
         btnRecycleView = findViewById(R.id.buttonRecycleViewDetail);
         btnNavMenu = findViewById(R.id.buttonNavMenu);
+        btnCalenderView = findViewById(R.id.buttonCalenView);
         /*
         rcv_main = findViewById(R.id.rcv_main);
         rcv_main.setHasFixedSize(true);
@@ -120,6 +121,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent navPage = new Intent(MainActivity.this, NavMenuActivity.class);
                 startActivity(navPage);
+            }
+        });
+
+        btnCalenderView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent calendarPage = new Intent(MainActivity.this, CalenderActivity.class);
+                startActivity(calendarPage);
             }
         });
 
