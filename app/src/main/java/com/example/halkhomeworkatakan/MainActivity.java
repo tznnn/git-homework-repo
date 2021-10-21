@@ -23,7 +23,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView;
+    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView, btnNavMenu;
     public EditText editText1;
     public String transferData, tag;
 
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btnFragmentDataTransfer = findViewById(R.id.buttonFragmentDataTransfer);
         btnViewPager = findViewById(R.id.buttonFragmentViewPager);
         btnRecycleView = findViewById(R.id.buttonRecycleViewDetail);
-
+        btnNavMenu = findViewById(R.id.buttonNavMenu);
         /*
         rcv_main = findViewById(R.id.rcv_main);
         rcv_main.setHasFixedSize(true);
@@ -112,6 +112,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent rcvPage = new Intent(MainActivity.this, RecycleViewActivity.class);
                 startActivity(rcvPage);
+            }
+        });
+
+        btnNavMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent navPage = new Intent(MainActivity.this, NavMenuActivity.class);
+                startActivity(navPage);
             }
         });
 
