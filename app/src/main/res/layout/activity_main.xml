@@ -7,16 +7,139 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/buttonVolley"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="316dp"
+        android:text="Volley ile Request-Response"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+
+
+    <Button
+        android:id="@+id/buttonFragmentViewPager"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="5dp"
+        android:text="FRAGMENT VİEW PAGER"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRecycleViewDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:text="ACTİVİTY ARASI GEÇİŞ"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+    <Button
+        android:id="@+id/buttonPref"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="5dp"
+        android:text="Localde veri saklama ve okuma"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonLocation"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+    <Button
+        android:id="@+id/buttonFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="5dp"
+        android:text="FRAGMENT OLUŞTURMA"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFragmentDataTransfer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+    <Button
+        android:id="@+id/buttonResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:text="ACTİVİTY RESULT İLE DÖNME"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+    <Button
+        android:id="@+id/buttonFragmentDataTransfer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="5dp"
+        android:text="FRAGMENT VERİ TAŞIMA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonFragment"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+    <Button
+        android:id="@+id/buttonNavMenu"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="5dp"
+        android:text="Navigation Menu"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCalenView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+    <Button
+        android:id="@+id/buttonLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="5dp"
+        android:text="Konum Bulma"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPref"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+    <Button
+        android:id="@+id/buttonCalenView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="5dp"
+        android:text="Tarih Seçme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonNavMenu"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
 
     <EditText
         android:id="@+id/editTextData"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Herhangi birşey yazınız.."
+        android:hint="Activity arası geçiş için herhangi bir şey yazınız.."
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,133 +148,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:text="ACTİVİTY ARASI GEÇİŞ"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
-
-    <Button
-        android:id="@+id/buttonResult"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="32dp"
-        android:text="ACTİVİTY RESULT İLE DÖNME"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
-
-    <Button
-        android:id="@+id/buttonFragment"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="32dp"
-        android:text="FRAGMENT OLUŞTURMA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
-
-    <Button
-        android:id="@+id/buttonFragmentDataTransfer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="152dp"
-        android:layout_marginEnd="32dp"
-        android:text="FRAGMENT VERİ TAŞIMA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
-
-    <Button
-        android:id="@+id/buttonFragmentViewPager"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="32dp"
-        android:text="FRAGMENT VİEW PAGER"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
-
-    <Button
         android:id="@+id/buttonRecycleViewDetail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="248dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="5dp"
         android:text="RECYCLEVİEW OLUŞTURMA VE DETAY GÖSTERME"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
-
-    <Button
-        android:id="@+id/buttonNavMenu"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="296dp"
-        android:layout_marginEnd="32dp"
-        android:text="Navigation Menu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
-
-    <Button
-        android:id="@+id/buttonCalenView"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="344dp"
-        android:layout_marginEnd="32dp"
-        android:text="Tarih Seçme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
-
-    <Button
-    android:id="@+id/buttonLocation"
-    android:layout_width="0dp"
-    android:layout_height="40dp"
-    android:layout_marginStart="32dp"
-    android:layout_marginTop="384dp"
-    android:layout_marginEnd="32dp"
-    android:text="Konum Bulma"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/editTextData" />
-
-    <Button
-        android:id="@+id/buttonPref"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="424dp"
-        android:layout_marginEnd="32dp"
-        android:text="Localde veri saklama ve okuma"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonFragmentViewPager"
         app:layout_constraintTop_toBottomOf="@+id/editTextData" />
 
 
