@@ -23,7 +23,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView, btnNavMenu, btnCalenderView;
+    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView, btnNavMenu, btnCalenderView, btnCurrentLocation;
     public EditText editText1;
     public String transferData, tag;
 
@@ -44,25 +44,8 @@ public class MainActivity extends AppCompatActivity {
         btnRecycleView = findViewById(R.id.buttonRecycleViewDetail);
         btnNavMenu = findViewById(R.id.buttonNavMenu);
         btnCalenderView = findViewById(R.id.buttonCalenView);
-        /*
-        rcv_main = findViewById(R.id.rcv_main);
-        rcv_main.setHasFixedSize(true);
-        rcv_main.setLayoutManager(new LinearLayoutManager(this));
+        btnCurrentLocation = findViewById(R.id.buttonLocation);
 
-        List<ItemMain> itemMainList = new ArrayList<>();
-        itemMainList.add(new ItemMain(1,"asdadas"));
-        itemMainList.add(new ItemMain(1,"123123"));
-
-        itemMainList.add(new ItemMain(1,"2323"));
-
-        itemMainList.add(new ItemMain(1,"dfgdfgd"));
-
-
-
-
-
-        rcv_main.setAdapter(new AdapterMain(itemMainList));
-*/
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,6 +115,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnCurrentLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent locationPage = new Intent(MainActivity.this, LocationActivity.class);
+                startActivity(locationPage);
+            }
+        });
 
     }
 
