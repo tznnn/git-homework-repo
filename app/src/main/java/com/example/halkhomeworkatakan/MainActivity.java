@@ -23,7 +23,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView, btnNavMenu, btnCalenderView, btnCurrentLocation,btnSharedPref;
+    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView, btnNavMenu, btnCalenderView, btnCurrentLocation,btnSharedPref,btnVolley;
     public EditText editText1;
     public String transferData, tag;
 
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         btnCalenderView = findViewById(R.id.buttonCalenView);
         btnCurrentLocation = findViewById(R.id.buttonLocation);
         btnSharedPref = findViewById(R.id.buttonPref);
+        btnVolley = findViewById(R.id.buttonVolley);
 
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +130,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent sharedPrefPage = new Intent(MainActivity.this,PreferencesActivity.class);
                 startActivity(sharedPrefPage);
+            }
+        });
+
+        btnVolley.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent volleyPage = new Intent(MainActivity.this,ActivityRequestResponse.class);
+                startActivity(volleyPage);
             }
         });
 
