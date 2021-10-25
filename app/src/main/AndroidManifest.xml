@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HalkHomeworkAtakan">
         <activity
+            android:name=".SerializationActivity"
+            android:exported="true" />
+        <activity
             android:name=".ActivityRequestResponse"
             android:exported="true" />
         <activity

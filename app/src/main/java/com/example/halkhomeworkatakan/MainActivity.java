@@ -17,13 +17,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView, btnNavMenu, btnCalenderView, btnCurrentLocation,btnSharedPref,btnVolley;
+    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView, btnNavMenu, btnCalenderView, btnCurrentLocation,btnSharedPref,btnVolley,btnGson;
     public EditText editText1;
     public String transferData, tag;
 
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btnCurrentLocation = findViewById(R.id.buttonLocation);
         btnSharedPref = findViewById(R.id.buttonPref);
         btnVolley = findViewById(R.id.buttonVolley);
+        btnGson = findViewById(R.id.buttonDs);
 
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -140,6 +143,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(volleyPage);
             }
         });
+
+        btnGson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gsonPage = new Intent(MainActivity.this,SerializationActivity.class);
+                startActivity(gsonPage);
+            }
+        });
+
 
     }
 
