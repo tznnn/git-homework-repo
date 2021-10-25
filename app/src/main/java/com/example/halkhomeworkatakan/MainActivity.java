@@ -25,7 +25,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView, btnNavMenu, btnCalenderView, btnCurrentLocation,btnSharedPref,btnVolley,btnGson;
+    Button btn, btnResultActivity, btnFragmentCreate, btnFragmentDataTransfer, btnViewPager, btnRecycleView, btnNavMenu, btnCalenderView, btnCurrentLocation, btnSharedPref, btnVolley, btnGson, btnGallery;
     public EditText editText1;
     public String transferData, tag;
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btnSharedPref = findViewById(R.id.buttonPref);
         btnVolley = findViewById(R.id.buttonVolley);
         btnGson = findViewById(R.id.buttonDs);
-
+        btnGallery = findViewById(R.id.buttonGallery);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         btnSharedPref.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent sharedPrefPage = new Intent(MainActivity.this,PreferencesActivity.class);
+                Intent sharedPrefPage = new Intent(MainActivity.this, PreferencesActivity.class);
                 startActivity(sharedPrefPage);
             }
         });
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         btnVolley.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent volleyPage = new Intent(MainActivity.this,ActivityRequestResponse.class);
+                Intent volleyPage = new Intent(MainActivity.this, ActivityRequestResponse.class);
                 startActivity(volleyPage);
             }
         });
@@ -147,8 +147,16 @@ public class MainActivity extends AppCompatActivity {
         btnGson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent gsonPage = new Intent(MainActivity.this,SerializationActivity.class);
+                Intent gsonPage = new Intent(MainActivity.this, SerializationActivity.class);
                 startActivity(gsonPage);
+            }
+        });
+
+        btnGallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent galleryPage = new Intent(MainActivity.this, GalleryActivity.class);
+                startActivity(galleryPage);
             }
         });
 

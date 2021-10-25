@@ -20,6 +20,15 @@
         app:layout_constraintStart_toEndOf="@+id/buttonVolley"
         app:layout_constraintTop_toBottomOf="@+id/editTextData" />
 
+    <Button
+        android:id="@+id/buttonGallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="376dp"
+        android:text="Galeriden resim çekme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
 
     <Button
         android:id="@+id/buttonVolley"
