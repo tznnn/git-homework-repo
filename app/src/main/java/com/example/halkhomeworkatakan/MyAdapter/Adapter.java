@@ -43,7 +43,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyHolder> {
 
         holder.name.setText(name);
         holder.message.setText(messages);
-        holder.imageView.setImageResource(R.drawable.ic_launcher_background);
+        holder.imageView.setImageResource(image);
 
     }
 

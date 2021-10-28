@@ -30,8 +30,8 @@ public class RecycleViewActivity extends AppCompatActivity {
 
         //RowModel rowModel = new RowModel("Atakan Tüzün", "Sa As hahaa", R.drawable.ic_launcher_background);
         modelList.add(new RowModel("Atakan Tüzün", "Sa As hahaa", R.drawable.ic_launcher_background));
-        modelList.add(new RowModel("Başlık", "Açıklama", R.drawable.ic_launcher_background));
-        modelList.add(new RowModel("DıLeley", "acıklama acıklama tey tey lalalalal", R.drawable.ic_launcher_background));
+        modelList.add(new RowModel("Başlık", "Açıklama", R.drawable.ic_launcher_foreground));
+        modelList.add(new RowModel("DıLeley", "acıklama acıklama tey tey lalalalal", R.drawable.ic_message));
         modelList.add(new RowModel("Özge Canlı", "Android developer", R.drawable.ic_launcher_background));
         modelList.add(new RowModel("CCCCC", "Android developer 3", R.drawable.ic_launcher_background));
         modelList.add(new RowModel("BBBBB", "Android developer 4", R.drawable.ic_launcher_background));
